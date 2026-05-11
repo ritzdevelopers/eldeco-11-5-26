@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const planSections = [
   {
     title: "Master Plan",
@@ -20,12 +18,10 @@ function Section7() {
         {planSections.map((section) => {
           const imageBlock = (
             <div className="relative min-h-[280px] overflow-hidden md:min-h-[328px]">
-              <Image
+              <img
                 src={section.image}
                 alt={section.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 466px"
-                className="object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <button

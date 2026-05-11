@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const priceCards = [
   {
     type: "3 BHK",
@@ -14,12 +12,10 @@ const priceCards = [
 function Section5() {
   return (
     <section id="price" className="relative isolate min-h-[646px] bg-black overflow-hidden flex justify-center items-center text-white ">
-      <Image
+      <img
         src="/eld-imgs/s5/s5-bg.png"
         alt=""
-        fill
-        sizes="100vw"
-        className="-z-20 object-cover"
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-black/50" />
 

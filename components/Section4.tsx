@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 const amenities = [
@@ -100,13 +99,11 @@ function Section4() {
           </div>
 
           <div className="relative min-h-[360px] overflow-hidden rounded-[13px] sm:min-h-[416px]">
-            <Image
+            <img
               key={activeAmenity}
               src={amenities[activeAmenity].image}
               alt={amenities[activeAmenity].title}
-              fill
-              sizes="(max-width: 1024px) 100vw, 594px"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const stats = [
   { value: "G+30", label: "Floors" },
   { value: "Only 2", label: "Towers" },
@@ -45,12 +43,10 @@ function Section2() {
           </div>
 
           <div className="relative mt-5 min-h-[260px] flex-1 overflow-hidden sm:min-h-[300px]">
-            <Image
+            <img
               src="/eld-imgs/s2/s2-img.jpg"
               alt="Luxury apartment living room"
-              fill
-              sizes="(max-width: 1024px) 100vw, 560px"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>

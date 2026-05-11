@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 function Section10() {
   return (
     <section id="contact" className="bg-white px-6 py-[50px] text-[#171717] sm:px-10 lg:px-[42px]">
@@ -41,12 +39,10 @@ function Section10() {
           </div>
 
           <div className="relative min-h-[300px] md:min-h-[376px]">
-            <Image
+            <img
               src="/eld-imgs/s10/s10-img.jpg"
               alt="Luxury apartment balcony"
-              fill
-              sizes="(max-width: 768px) 100vw, 187px"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>

@@ -1,25 +1,19 @@
-import Image from "next/image";
-
 function Section9() {
   return (
     <section id="virtual-tour" className="relative isolate min-h-[367px] bg-black overflow-hidden px-6 py-[58px] text-white sm:px-10 lg:px-[49px]">
-      <Image
+      <img
         src="/eld-imgs/s9/s9-i1.jpg"
         alt=""
-        fill
-        sizes="100vw"
-        className="-z-20 object-cover"
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-black/62" />
 
       <div className="mx-auto grid max-w-[927px] items-center gap-[48px] lg:grid-cols-[466px_1fr]">
         <div className="relative h-[258px] overflow-hidden rounded-[22px] shadow-[0_12px_32px_rgba(0,0,0,0.32)]">
-          <Image
+          <img
             src="/eld-imgs/s9/s9-bg.jpg"
             alt="Virtual site tour preview"
-            fill
-            sizes="(max-width: 1024px) 100vw, 466px"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <button

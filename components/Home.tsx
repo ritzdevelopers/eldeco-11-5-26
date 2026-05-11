@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 const slides = [
@@ -24,14 +23,11 @@ function Home() {
     <section id="home" className="relative isolate min-h-screen overflow-hidden   text-white">
       <div className="absolute inset-0 -z-10">
         {slides.map((src, index) => (
-          <Image
+          <img
             key={`${src}-${index}`}
             src={src}
             alt="Iconic luxury apartments in Gurgaon"
-            fill
-            priority={index === 0}
-            sizes="100vw"
-            className={`object-cover transition-opacity duration-700 ease-in-out ${
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${
               activeSlide === index ? "opacity-100" : "opacity-0"
             }`}
           />

@@ -1,11 +1,9 @@
-import Image from "next/image";
-
 function Footer() {
   return (
     <footer className="bg-black px-6 pb-[52px] pt-[48px] text-center text-white sm:px-10">
       <div className="mx-auto max-w-[790px]">
         <div className="mb-[30px] flex justify-center">
-          <Image
+          <img
             src="/logo/logo.png"
             alt="Eldeco"
             width={150}

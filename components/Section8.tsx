@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const locationAdvantages = [
   {
     title: "IMT Manesar",
@@ -70,12 +68,10 @@ function Section8() {
           </div>
 
           <div className="relative min-h-[360px] overflow-hidden sm:min-h-[453px]">
-            <Image
+            <img
               src="/eld-imgs/s8/g-map.jpg"
               alt="Google map showing location advantages near Sector 80 Gurugram"
-              fill
-              sizes="(max-width: 1024px) 100vw, 468px"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>

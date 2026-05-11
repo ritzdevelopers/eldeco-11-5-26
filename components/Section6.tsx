@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -73,12 +72,10 @@ function Section6() {
           {galleryImages.map((image, index) => (
             <SwiperSlide key={`${image.src}-${index}`}>
               <div className="relative h-[322px] overflow-hidden rounded-[3px]">
-                <Image
+                <img
                   src={image.src}
                   alt={image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 460px"
-                  className="object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
             </SwiperSlide>

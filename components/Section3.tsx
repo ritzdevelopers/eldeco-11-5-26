@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 
 const leftHighlights = [
@@ -54,12 +53,10 @@ function Section3() {
             <div className="absolute right-[6px] top-[8px] h-[290px] w-[300px] rounded-[50%] border border-white/45" />
 
             <div className="relative z-10 h-[310px] w-[310px]">
-              <Image
+              <img
                 src="/eld-imgs/s3/s3-img1.png"
                 alt="Eldeco luxury towers"
-                fill
-                sizes="310px"
-                className="object-contain"
+                className="absolute inset-0 h-full w-full object-contain"
               />
             </div>
           </div>

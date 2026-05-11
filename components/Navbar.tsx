@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navLinks = [
@@ -38,12 +37,11 @@ function Navbar() {
     >
       <div className="mx-auto flex h-full max-w-[1100px] items-center px-[43px] 2xl:px-0">
         <a href="#home" aria-label="Eldeco home" className="shrink-0">
-          <Image
+          <img
             src="/logo/logo.png"
             alt="Eldeco"
             width={150}
             height={36}
-            priority
             className="h-auto w-[150px]"
           />
         </a>
