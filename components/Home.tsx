@@ -56,7 +56,7 @@ function Home() {
       </div>
 
       <div className="absolute left-1/2 top-[9%] w-full max-w-[1250px] -translate-x-1/2 px-6 sm:px-12 lg:px-0">
-        <div className={`${styles.paragraph} ml-auto w-fit rounded-[4px] bg-black/45 px-3 py-2 text-right text-[9px] font-[400] leading-tight text-white/90 backdrop-blur-[2px]`}>
+        <div className={`${styles.paragraph} ml-auto w-fit text-right text-[9px] font-[400]  text-white`}>
           Project RERA No.: GGM/XXXX/XXX/2023/XX Dated: 11.02.2026
           <br />
           Agent RERA No.: RC/HARERA/GGM/XXXX/2023/22
