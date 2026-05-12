@@ -1,3 +1,5 @@
+import styles from "./page.module.css";
+
 const locationAdvantages = [
   {
     title: "IMT Manesar",
@@ -39,39 +41,44 @@ const locationAdvantages = [
 
 function Section8() {
   return (
-    <section id="location" className="bg-white px-6 pb-[37px] pt-[36px] text-[#181818] sm:px-10 lg:px-[32px]">
-      <div className="mx-auto max-w-[960px]">
+    <section id="location" className="overflow-hidden bg-white px-6 pb-[37px] pt-[36px] text-[#181818] sm:px-10 lg:px-[32px]">
+      <div className="mx-auto w-full max-w-[1250px]">
         <div className="mb-[27px] text-center">
-          <h2 className="text-[31px] font-extrabold leading-none tracking-[-0.02em] text-[#202020]">
+          <h2 className={`${styles.heading} text-[32px] font-[600] text-[#000000] sm:text-[36px] lg:text-[40px]`}>
             Location Advantages
           </h2>
-          <p className="mt-[16px] text-[20px] leading-none text-[#3c3c3c]">
+          <p className={`${styles.paragraph} mt-[5px] text-[20px] font-[400] text-[#000000] sm:text-[22px] lg:text-[24px]`}>
             Sector 80, Gurugram
           </p>
         </div>
 
-        <div className="grid items-start gap-[36px] lg:grid-cols-[444px_1fr]">
-          <div className="space-y-[18px] pt-[2px]">
+        <div className="flex flex-col items-start gap-8 lg:flex-row lg:gap-[36px]">
+          <div className="min-w-0 space-y-5 pt-[2px] sm:space-y-[18px] lg:flex-[0_0_calc(60%_-_18px)] xl:w-[623px] xl:flex-none">
             {locationAdvantages.map((item) => (
               <div key={item.title} className="flex gap-[9px]">
-                <span className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-black" />
-                <div className="text-[13px] leading-[1.72] text-[#1d1d1d]">
-                  <p>
-                    <strong className="font-extrabold">{item.title}</strong>
+                <span className="mt-[12px] h-[6px] w-[6px] shrink-0 rounded-full bg-black" />
+                <div className="min-w-0 text-[13px] leading-[1.72] text-[#1d1d1d]">
+                  <p className={styles.paragraph}>
+                    <strong className="font-[700] text-[16px]">{item.title}</strong>
                     <span> - </span>
-                    <span>{item.distance}</span>
+                    <span className="text-[16px] font-[400] text-[#000000]">{item.distance}</span>
                   </p>
-                  <p>{item.description}</p>
+                  <p className={`${styles.paragraph} text-[16px] font-[400] text-[#000000]`}>{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="relative min-h-[360px] overflow-hidden sm:min-h-[453px]">
-            <img
-              src="/eld-imgs/s8/g-map.jpg"
-              alt="Google map showing location advantages near Sector 80 Gurugram"
-              className="absolute inset-0 h-full w-full object-cover"
+          <div className="relative w-full min-w-0 overflow-hidden lg:flex-[0_0_calc(40%_-_18px)] xl:flex-1">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14042.969478378072!2d76.95764064999999!3d28.3666376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3c5484bf5267%3A0x3ea2dde8a474eb30!2sSector%2080%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1778576650291!5m2!1sen!2sin"
+              title="Sector 80 Gurugram Google Map"
+              width="600"
+              height="450"
+              className="h-[320px] w-full border-0 sm:h-[420px] lg:h-[604px] lg:max-w-[623px]"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>

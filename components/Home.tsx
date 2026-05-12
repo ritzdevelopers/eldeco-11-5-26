@@ -1,44 +1,62 @@
 "use client";
 
+import type { Swiper as SwiperInstance } from "swiper";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import { useState } from "react";
+import styles from "./page.module.css";
 
 const slides = [
+   "/imgs/eld-img-2.jpg",
   "/eld-imgs/home/home-s1.jpg",
-  "/eld-imgs/home/home-s1.jpg",
-  "/eld-imgs/home/home-s1.jpg",
+  "/imgs/eld-img-1.jpg",
+ 
 ];
 
 function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
 
   const previousSlide = () => {
-    setActiveSlide((slide) => (slide === 0 ? slides.length - 1 : slide - 1));
+    swiper?.slidePrev();
   };
 
   const nextSlide = () => {
-    setActiveSlide((slide) => (slide === slides.length - 1 ? 0 : slide + 1));
+    swiper?.slideNext();
   };
 
   return (
     <section id="home" className="relative isolate min-h-screen overflow-hidden   text-white">
       <div className="absolute inset-0 -z-10">
-        {slides.map((src, index) => (
-          <img
-            key={`${src}-${index}`}
-            src={src}
-            alt="Iconic luxury apartments in Gurgaon"
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${
-              activeSlide === index ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+        <Swiper
+          modules={[Autoplay]}
+          onSwiper={setSwiper}
+          onSlideChange={(slider) => setActiveSlide(slider.realIndex)}
+          autoplay={{
+            delay: 7000,
+            disableOnInteraction: false,
+          }}
+          loop
+          className="h-full w-full"
+        >
+          {slides.map((src, index) => (
+            <SwiperSlide key={`${src}-${index}`}>
+              <img
+                src={src}
+                alt="Iconic luxury apartments in Gurgaon"
+                className="h-full w-full object-cover"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/25 to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/25 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" /> */}
       </div>
 
-      <div className="absolute left-1/2 top-[14%] w-full max-w-[1100px] -translate-x-1/2 px-6 sm:px-12 lg:px-0">
-        <div className="ml-auto text-right text-[9px] font-medium leading-tight text-white/90">
+      <div className="absolute left-1/2 top-[9%] w-full max-w-[1250px] -translate-x-1/2 px-6 sm:px-12 lg:px-0">
+        <div className={`${styles.paragraph} ml-auto text-right text-[9px] font-[400] leading-tight text-white/90`}>
           Project RERA No.: GGM/XXXX/XXX/2023/XX Dated: 11.02.2026
           <br />
           Agent RERA No.: RC/HARERA/GGM/XXXX/2023/22
@@ -47,9 +65,9 @@ function Home() {
         </div>
       </div>
 
-      <div className="mx-auto flex min-h-screen max-w-[1100px] items-end px-6 pb-20 sm:px-12 lg:px-0">
+      <div className="mx-auto flex min-h-screen max-w-[1250px] items-end px-6 pb-[60px] md:pb-0 sm:px-12 xl:px-0">
         <div className="mb-8 w-full max-w-[600px] text-center">
-          <h1 className="mb-3 text-2xl font-bold leading-tight sm:text-3xl">
+          <h1 className={`${styles.heading} mb-3 text-2xl font-bold leading-tight sm:text-3xl`}>
             Iconic Luxury Apartments In Gurgaon
           </h1>
 
@@ -64,19 +82,19 @@ function Home() {
 
           <div className="mb-3 w-full justify-center items-center flex gap-7">
             <div>
-              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80">
+              <p className={`${styles.paragraph} mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80`}>
                 Starting Price
               </p>
-              <p className="text-2xl font-bold">₹2.99 Cr*</p>
+              <p className={`${styles.paragraph} text-2xl font-bold`}>₹3.11 Cr*</p>
             </div>
 
             <div className="h-12 w-px bg-white/55" />
 
             <div>
-              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80">
-                Pre Launch Benefit
+              <p className={`${styles.paragraph} mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80`}>
+              Nothing for 36 Months
               </p>
-              <p className="text-2xl font-bold">₹55 Lakh*</p>
+              <p className={`${styles.paragraph} text-2xl font-bold`}>Pay 30% Now</p>
             </div>
           </div>
 
@@ -90,22 +108,22 @@ function Home() {
             <span>Virtual Visit</span>
           </div>
 
-          <p className="flex items-center justify-center text-center gap-2 text-sm font-semibold">
+          <p className={`${styles.paragraph} flex items-center justify-center text-center gap-2 text-sm font-semibold`}>
             <span>●</span>
             At Sector 80, Gurugram
           </p>
         </div>
       </div>
 
-      <div className="absolute bottom-14 left-1/2 w-full max-w-[1100px] -translate-x-1/2 px-6 sm:px-12 lg:px-0">
+      <div className="absolute bottom-5 lg:bottom-14 md:-right-8 lg:right-0 lg:left-1/2 w-full left-1/2 -translate-x-1/2 max-w-[1250px] lg:-translate-x-1/2 px-6 sm:px-12 lg:px-0">
         <div className="ml-auto flex w-fit items-center gap-5">
           <div className="flex items-center gap-4 text-sm font-bold">
             {slides.map((_, index) => (
               <button
                 key={index}
                 type="button"
-                onClick={() => setActiveSlide(index)}
-                className={`border-b pb-1 transition ${
+                onClick={() => swiper?.slideToLoop(index)}
+                className={`border-b pb-1 transition ${styles.heading} ${
                   activeSlide === index
                     ? "border-white text-white"
                     : "border-transparent text-white/75"
@@ -116,14 +134,16 @@ function Home() {
             ))}
           </div>
 
-          <div className="h-px w-28 bg-white/45" />
+          <div className="h-px w-28 bg-white" />
 
-          <button type="button" onClick={previousSlide} className="text-2xl">
-            ‹
+         <div className="flex items-center gap-0">
+         <button type="button" onClick={previousSlide} className="cursor-pointer">
+           <img src="/lft.svg" alt="" className="w-[25px] h-[25px]"/>
           </button>
-          <button type="button" onClick={nextSlide} className="text-2xl">
-            ›
+          <button type="button" onClick={nextSlide} className="cursor-pointer">
+          <img src="/rght.svg" alt="" className="w-[25px] h-[25px]"/>
           </button>
+         </div>
         </div>
       </div>
     </section>

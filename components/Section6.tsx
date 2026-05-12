@@ -4,7 +4,11 @@ import { useState } from "react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
+import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+import { LiaLongArrowAltLeftSolid } from "react-icons/lia"; 
+import { OPEN_LEAD_POPUP_EVENT } from "./LeadPopup";
+import styles from "./page.module.css";
+{/* <LiaLongArrowAltRightSolid />  */}
 const galleryImages = [
   {
     src: "/eld-imgs/s6/s6-i1.jpg",
@@ -15,7 +19,15 @@ const galleryImages = [
     alt: "Premium apartments with blue sky",
   },
   {
-    src: "/eld-imgs/s6/s6-i1.jpg",
+    src: "/imgs/eld-img-3.jpg",
+    alt: "Modern luxury apartment community",
+  },
+  {
+    src: "/imgs/eld-img-4.webp",
+    alt: "Modern luxury apartment community",
+  },
+  {
+    src: "/imgs/eld-img-5.jpg",
     alt: "Modern luxury apartment community",
   },
 ];
@@ -23,15 +35,19 @@ const galleryImages = [
 function Section6() {
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
 
+  const openLeadPopup = () => {
+    window.dispatchEvent(new Event(OPEN_LEAD_POPUP_EVENT));
+  };
+
   return (
-    <section id="gallery" className="bg-white px-6 py-[47px] text-[#111] sm:px-10 lg:px-[46px]">
-      <div className="mx-auto max-w-[934px]">
-        <div className="mb-[27px] flex items-start justify-between gap-8">
-          <div>
-            <h2 className="text-[31px] font-extrabold leading-[1.08] tracking-[-0.025em] text-black">
+    <section id="gallery" className="overflow-hidden bg-white px-6 py-[38px] text-[#111] sm:px-10 sm:py-[47px] lg:px-[46px]">
+      <div className="mx-auto w-full max-w-[1250px]">
+        <div className="mb-[27px] flex flex-col items-center justify-between gap-5 text-center md:flex-row md:items-start md:gap-8 md:text-left">
+          <div className="min-w-0">
+            <h2 className={`${styles.heading} text-[32px] font-[700] text-[#000000] sm:text-[36px] lg:text-[40px]`}>
               Your Gateway To Luxury Living
             </h2>
-            <p className="mt-[8px] max-w-[670px] text-[19px] leading-[1.6] text-[#171717]">
+            <p className={`${styles.paragraph} mx-auto mt-[8px] max-w-[850px] text-[18px] font-[400] text-[#000000] sm:text-[21px] md:mx-0 lg:text-[24px]`}>
               Discover luxury apartments in Sector 80 Gurgaon with premium amenities,
               modern living, & seamless connectivity.
             </p>
@@ -44,7 +60,8 @@ function Section6() {
               onClick={() => swiper?.slidePrev()}
               className="transition hover:text-[#c9a846]"
             >
-              ←
+              
+             <img src="/eld-imgs/s6/lft-icn.svg" alt="" />
             </button>
             <button
               type="button"
@@ -52,7 +69,7 @@ function Section6() {
               onClick={() => swiper?.slideNext()}
               className="transition hover:text-[#c9a846]"
             >
-              →
+             <img src="/eld-imgs/s6/rght-icn.svg" alt="" />
             </button>
           </div>
         </div>
@@ -61,6 +78,7 @@ function Section6() {
           onSwiper={setSwiper}
           spaceBetween={16}
           slidesPerView={1}
+          className="w-full"
           loop
           breakpoints={{
             768: {
@@ -71,7 +89,7 @@ function Section6() {
         >
           {galleryImages.map((image, index) => (
             <SwiperSlide key={`${image.src}-${index}`}>
-              <div className="relative h-[322px] overflow-hidden rounded-[3px]">
+              <div className="relative h-[260px] overflow-hidden rounded-[3px] sm:h-[340px] md:h-[380px] lg:h-[430px]">
                 <img
                   src={image.src}
                   alt={image.alt}
@@ -90,7 +108,7 @@ function Section6() {
               onClick={() => swiper?.slidePrev()}
               className="transition hover:text-[#c9a846]"
             >
-              ←
+             <img src="/eld-imgs/s6/lft-icn.svg" alt="" />
             </button>
             <button
               type="button"
@@ -98,7 +116,7 @@ function Section6() {
               onClick={() => swiper?.slideNext()}
               className="transition hover:text-[#c9a846]"
             >
-              →
+             <img src="/eld-imgs/s6/rght-icn.svg" alt="" />
             </button>
           </div>
         </div>
@@ -106,7 +124,8 @@ function Section6() {
         <div className="mt-[22px] flex justify-center">
           <button
             type="button"
-            className="h-[38px] rounded-[4px] bg-[#c9a846] px-[27px] text-[13px] font-extrabold text-white"
+            onClick={openLeadPopup}
+            className="h-[50px] w-full max-w-[220px] rounded-[5px] bg-[#c9a846] px-[27px] text-[16px] font-[600] text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#b8963f] hover:shadow-[0_10px_22px_rgba(201,168,70,0.35)] active:translate-y-0 sm:w-auto sm:max-w-none"
           >
             See All Photos
           </button>

@@ -1,154 +1,136 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { OPEN_LEAD_POPUP_EVENT } from "./LeadPopup";
+import styles from "./page.module.css";
 
 const leftHighlights = [
   {
     text: "Amenities: World-class lifestyle & wellness amenities",
-    icon: <AmenityIcon />,
+    icon: "./eld-imgs/s3/s3-s1.svg",
   },
   {
     text: "Spacious balconies with abundant natural light & airflow",
-    icon: <BalconyIcon />,
+    icon: "./eld-imgs/s3/s3-s2.svg",
   },
   {
     text: "Multi-tier security system with 24x7 CCTV surveillance",
-    icon: <SecurityIcon />,
+    icon: "./eld-imgs/s3/s3-s3.svg",
   },
 ];
 
 const rightHighlights = [
   {
     text: "Strategically located near NH-48, Dwarka Expressway & KMP Expressway",
-    icon: <RoadIcon />,
+    icon: "./eld-imgs/s3/s3-s4.svg",
   },
   {
     text: "Seamless connectivity to Cyber City, IMT Manesar & IGI Airport",
-    icon: <CityIcon />,
+    icon: "./eld-imgs/s3/s3-s5.svg",
   },
   {
     text: "Nearby reputed schools, hospitals, malls, & business hubs",
-    icon: <BuildingIcon />,
+    icon: "./eld-imgs/s3/s3-s6.svg",
   },
 ];
 
 function Section3() {
+  const openLeadPopup = () => {
+    window.dispatchEvent(new Event(OPEN_LEAD_POPUP_EVENT));
+  };
+
   return (
     <section
       id="highlights"
-      className="overflow-hidden bg-black px-6 pb-[35px] pt-[43px] text-white sm:px-10 lg:px-[58px]"
+      className="flex min-h-0 items-center justify-center overflow-hidden bg-black px-6 pb-[35px] pt-[43px] text-white sm:px-10 lg:min-h-[715px] lg:px-[58px]"
     >
-      <div className="mx-auto max-w-[860px] text-center">
-        <h2 className="text-[31px] font-extrabold leading-none tracking-[-0.02em]">
-          Key Highlights
-        </h2>
-
-        <div className="mt-[25px] grid items-center gap-8 lg:grid-cols-[180px_1fr_180px] lg:gap-[28px]">
-          <div className="flex h-full flex-col justify-between gap-[34px]">
-            {leftHighlights.map((highlight) => (
-              <HighlightCard key={highlight.text} {...highlight} />
+      <div className="mx-auto w-full max-w-none text-center xl:max-w-[860px]">
+        <div className="mt-[25px] flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-8 xl:gap-[88px]">
+          <div className="flex w-full max-w-[460px] flex-col justify-between gap-5 sm:gap-6 lg:h-full lg:w-auto lg:min-w-[170px] lg:max-w-[190px] lg:gap-[52px] xl:min-w-[200px] xl:max-w-none xl:gap-[77px]">
+            {leftHighlights.map((highlight, idx) => (
+              <HighlightCard
+                key={highlight.text}
+                {...highlight}
+                position="left"
+                idx={idx}
+              />
             ))}
           </div>
 
-          <div className="relative mx-auto flex h-[331px] w-full max-w-[500px] items-center justify-center">
-            <div className="absolute left-[6px] top-[8px] h-[290px] w-[300px] rounded-[50%] border border-white/45" />
-            <div className="absolute right-[6px] top-[8px] h-[290px] w-[300px] rounded-[50%] border border-white/45" />
+          <div className="relative mx-auto flex w-full max-w-[360px] flex-col items-center justify-center gap-8 sm:max-w-[460px] sm:gap-10 lg:max-w-[410px] lg:gap-[42px] xl:max-w-[500px] xl:gap-[50px]">
+            {/* Title */}
+            <div className="relative z-20 flex w-full items-center justify-center">
+              <h2 className={`${styles.heading} text-[32px] font-[600] leading-none tracking-[-0.02em] sm:text-[36px] lg:text-[38px] xl:text-[40px]`}>
+                Key Highlights
+              </h2>
+            </div>
 
-            <div className="relative z-10 h-[310px] w-[310px]">
-              <img
-                src="/eld-imgs/s3/s3-img1.png"
-                alt="Eldeco luxury towers"
-                className="absolute inset-0 h-full w-full object-contain"
-              />
+            {/* Venn-diagram circles with center image */}
+            <div className="relative my-[18px] flex h-[230px] w-full items-center justify-center sm:h-[300px] lg:h-[300px] xl:h-[340px]">
+              {/* Left circle */}
+              <div className="absolute left-1/2 top-1/2 h-[250px] w-[250px] -translate-x-[73%] -translate-y-1/2 rounded-full border border-white/45 bg-black sm:h-[330px] sm:w-[330px] sm:-translate-x-[75%] lg:h-[340px] lg:w-[340px] lg:-translate-x-[76%] xl:h-[403px] xl:w-[403px] xl:-translate-x-[78%]" />
+              {/* Right circle */}
+              <div className="absolute left-1/2 top-1/2 h-[250px] w-[250px] -translate-x-[27%] -translate-y-1/2 rounded-full border border-white/45 bg-black sm:h-[330px] sm:w-[330px] sm:-translate-x-[25%] lg:h-[340px] lg:w-[340px] lg:-translate-x-[24%] xl:h-[403px] xl:w-[403px] xl:-translate-x-[22%]" />
+
+              {/* Center circular image */}
+              <div className="relative z-10 h-[260px] w-[260px] sm:h-[340px] sm:w-[340px] lg:h-[350px] lg:w-[350px] xl:h-[419px] xl:w-[419px]">
+                <img
+                  src="/eld-imgs/s3/s3-img1.png"
+                  alt="Eldeco luxury towers"
+                  className="absolute inset-0 h-full w-full "
+                />
+              </div>
+            </div>
+
+            {/* Button */}
+            <div className="relative z-20 flex w-full items-center justify-center">
+              <button
+                type="button"
+                onClick={openLeadPopup}
+                className="h-[60px] w-full max-w-[269px] cursor-pointer rounded-[4px] bg-[#d3b65b] px-[27px] text-[16px] font-[600] text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#c2a64d] hover:shadow-[0_10px_22px_rgba(211,182,91,0.35)] active:translate-y-0 xl:w-[269px]"
+              >
+                Explore More Highlights
+              </button>
             </div>
           </div>
 
-          <div className="flex h-full flex-col justify-between gap-[34px]">
-            {rightHighlights.map((highlight) => (
-              <HighlightCard key={highlight.text} {...highlight} />
+          <div className="flex w-full max-w-[460px] flex-col justify-between gap-5 sm:gap-6 lg:h-full lg:w-auto lg:min-w-[170px] lg:max-w-[190px] lg:gap-[52px] xl:min-w-[200px] xl:max-w-none xl:gap-[77px]">
+            {rightHighlights.map((highlight, idx) => (
+              <HighlightCard
+                key={highlight.text}
+                {...highlight}
+                idx={idx}
+                position="right"
+              />
             ))}
           </div>
         </div>
-
-        <button
-          type="button"
-          className="mt-[18px] h-[43px] rounded-[4px] bg-[#d3b65b] px-[27px] text-[13px] font-extrabold text-white"
-        >
-          Explore More Highlights
-        </button>
       </div>
     </section>
   );
 }
 
-function HighlightCard({ icon, text }: { icon: ReactNode; text: string }) {
+function HighlightCard({
+  icon,
+  text,
+  idx,
+  position,
+}: {
+  icon: string;
+  text: string;
+  idx: number;
+  position: string;
+}) {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div
+      className={`flex w-full flex-col items-center text-center ${idx === 1 && position === "left" ? "lg:-ml-[36px] xl:-ml-[50px]" : idx === 1 && position === "right" ? "lg:translate-x-[36px] xl:translate-x-[50px]" : ""}`}
+    >
       <div className="mb-[11px] flex h-[35px] items-center justify-center text-[#d3b65b]">
-        {icon}
+        <img src={icon} alt={text} className="h-full w-full object-contain" />
       </div>
-      <p className="max-w-[172px] text-[12px] font-medium leading-[1.45] text-white">
+      <p className={`${styles.paragraph} w-full text-[15px] font-[400] leading-[1.45] text-white`}>
         {text}
       </p>
     </div>
-  );
-}
-
-function AmenityIcon() {
-  return (
-    <svg width="37" height="34" viewBox="0 0 37 34" fill="none" aria-hidden="true">
-      <path d="M7 15h15v12H7V15Z" stroke="currentColor" strokeWidth="2" />
-      <path d="M10 19h3M16 19h3M10 23h3M16 23h3M4 27h22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M27 12c4 3 4 9 0 12M30 8c6 5 6 14 0 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="6" cy="8" r="2" fill="currentColor" />
-      <path d="M11 5c-3 0-5 2-5 5M15 8c-5-3-11 0-12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function BalconyIcon() {
-  return (
-    <svg width="37" height="34" viewBox="0 0 37 34" fill="none" aria-hidden="true">
-      <path d="M8 12h21M10 12v15M15 12v15M20 12v15M25 12v15M6 27h25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M7 9h23M10 6h17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function SecurityIcon() {
-  return (
-    <svg width="37" height="34" viewBox="0 0 37 34" fill="none" aria-hidden="true">
-      <path d="M8 11 20 6l9 4v5c0 7-4 12-9 14-5-2-9-7-9-14v-4Z" fill="currentColor" opacity=".9" />
-      <path d="m14 21 5-5 4 4 6-7" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M5 25 18 12M21 9l5-5 3 3-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function RoadIcon() {
-  return (
-    <svg width="37" height="34" viewBox="0 0 37 34" fill="none" aria-hidden="true">
-      <path d="M11 29 17 6h3l6 23M18.5 10v4M18.5 18v4M18.5 26v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M8 29h21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M26 8c2-2 4-3 7-3-1 3-2 5-5 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function CityIcon() {
-  return (
-    <svg width="37" height="34" viewBox="0 0 37 34" fill="none" aria-hidden="true">
-      <path d="M7 29V16h8v13M15 29V9h8v20M23 29V14h7v15M5 29h27" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M10 19h2M10 23h2M18 13h2M18 17h2M18 21h2M26 18h1.5M26 22h1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M21 5h5l-2 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function BuildingIcon() {
-  return (
-    <svg width="37" height="34" viewBox="0 0 37 34" fill="none" aria-hidden="true">
-      <path d="M6 29V11h10v18M21 29V6h10v23M4 29h29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M10 15h2M10 20h2M10 25h2M25 10h2M25 15h2M25 20h2M25 25h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
   );
 }
 
