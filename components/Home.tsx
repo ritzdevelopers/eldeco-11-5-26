@@ -9,8 +9,8 @@ import styles from "./page.module.css";
 
 const slides = [
    "/imgs/eld-img-2.jpg",
-  "/eld-imgs/home/home-s1.jpg",
-  "/imgs/eld-img-1.jpg",
+  "/imgs/slider2.jpg",
+  "/imgs/slider1.jpg",
  
 ];
 
@@ -56,7 +56,7 @@ function Home() {
       </div>
 
       <div className="absolute left-1/2 top-[9%] w-full max-w-[1250px] -translate-x-1/2 px-6 sm:px-12 lg:px-0">
-        <div className={`${styles.paragraph} ml-auto text-right text-[9px] font-[400] leading-tight text-white/90`}>
+        <div className={`${styles.paragraph} ml-auto w-fit rounded-[4px] bg-black/45 px-3 py-2 text-right text-[9px] font-[400] leading-tight text-white/90 backdrop-blur-[2px]`}>
           Project RERA No.: GGM/XXXX/XXX/2023/XX Dated: 11.02.2026
           <br />
           Agent RERA No.: RC/HARERA/GGM/XXXX/2023/22
@@ -133,7 +133,6 @@ function Home() {
               </button>
             ))}
           </div>
-
           <div className="h-px w-28 bg-white" />
 
          <div className="flex items-center gap-0">

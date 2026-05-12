@@ -76,7 +76,7 @@ function Section2() {
 
           <div className="  mt-5   h-auto w-full w-full lg:max-w-[679px] overflow-hidden xl:w-[679px]  ">
             <img
-              src="/eld-imgs/s2/s2-img.jpg"
+              src="/imgs/s2-nimg.jpg"
               alt="Luxury apartment living room"
               className=" h-auto w-full object-cover"
             />

@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eldeco Wow",
-  description: "Eldeco Wow.",
+  title: "Eldeco Terra & Sol",
+  description: "Eldeco Terra & Sol.",
 };
 
 export default function RootLayout({

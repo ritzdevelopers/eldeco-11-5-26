@@ -6,27 +6,27 @@ import styles from "./page.module.css";
 
 const amenities = [
   {
-    title: "All Weather Infinity pool",
+    title: "All Weather Infinity Pool",
     image: "/amenities/infinity-pool.jpg",
     icon: "/eld-imgs/s4/s4-i1.svg",
   },
   {
-    title: "Lawn tennis court",
+    title: "Lawn Tennis Court",
     image: "/amenities/lawn-tenis.jpg",
     icon: "/eld-imgs/s4/s4-i2.svg",
   },
   {
-    title: "Yoga & aerobics",
+    title: "Yoga & Aerobics",
     image: "/amenities/yoga.jpg",
     icon: "/eld-imgs/s4/s4-i3.svg",
   },
   {
-    title: "Jogging and fitness tracks",
+    title: "Jogging and Fitness Tracks",
     image: "/amenities/jogging.jpg",
     icon: "/eld-imgs/s4/s4-i4.svg",
   },
   {
-    title: "Landscaped podium greens",
+    title: "Landscaped Podium Greens",
     image: "/amenities/landscaped.jpg",
     icon: "/eld-imgs/s4/s4-i5.svg",
   },

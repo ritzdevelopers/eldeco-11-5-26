@@ -74,7 +74,7 @@ function Section3() {
               {/* Center circular image */}
               <div className="relative z-10 h-[260px] w-[260px] sm:h-[340px] sm:w-[340px] lg:h-[350px] lg:w-[350px] xl:h-[419px] xl:w-[419px]">
                 <img
-                  src="/eld-imgs/s3/s3-img1.png"
+                  src="/imgs/n-circle2.png"
                   alt="Eldeco luxury towers"
                   className="absolute inset-0 h-full w-full "
                 />
