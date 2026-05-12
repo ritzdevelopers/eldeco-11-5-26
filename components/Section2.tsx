@@ -39,11 +39,11 @@ function Section2() {
   return (
     <section
       id="overview"
-      className="bg-white px-6 py-16 text-[#2a2a2a] sm:px-10 lg:px-12"
+      className="bg-white px-6 py-[35px] text-[#2a2a2a] sm:px-10 lg:px-12 lg:py-[70px]"
     >
       <div className="mx-auto grid max-w-[1250px] items-stretch gap-y-8 lg:grid-cols-[1.1fr_0.92fr] lg:gap-y-0">
         {/* Left Side Container  */}
-        <div className="flex h-full min-w-0 flex-col xl:pr-0 pr-4  lg:justify-between">
+        <div className="flex h-full min-w-0 flex-col xl:pr-0 lg:pr-4 pr-0  lg:justify-between">
           <div className="space-y-5 text-[15px] leading-7 text-[#333]  ">
             <p className={`${styles.paragraph} mb-3 text-[16px] text-center lg:text-left font-semibold uppercase   text-[#A27140]`}>
               Overview
@@ -74,11 +74,11 @@ function Section2() {
             </p>
           </div>
 
-          <div className="  mt-5   h-auto w-full w-full lg:max-w-[679px] overflow-hidden xl:w-[679px]  ">
+          <div className={`  mt-5      w-full w-full lg:max-w-[679px] overflow-hidden xl:w-[679px]  `}>
             <img
               src="/imgs/s2-nimg.jpg"
               alt="Luxury apartment living room"
-              className=" h-auto w-full object-cover"
+              className={` w-full object-cover ${styles.height_responsive}`}
             />
           </div>
         </div>

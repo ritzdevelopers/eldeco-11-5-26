@@ -11,20 +11,24 @@ import styles from "./page.module.css";
 {/* <LiaLongArrowAltRightSolid />  */}
 const galleryImages = [
   {
-    src: "/imgs/gn1.jpg",
+    src: "/imgs/n-s1.jpg",
     alt: "Luxury residential towers in Gurgaon",
   },
  
   {
-    src: "/imgs/eld-img-3.jpg",
+    src: "/imgs/n-s2.jpg",
     alt: "Modern luxury apartment community",
   },
   {
-    src: "/imgs/eld-img-4.webp",
+    src: "/imgs/n-s3.jpg",
     alt: "Modern luxury apartment community",
   },
   {
-    src: "/imgs/eld-img-5.jpg",
+    src: "/imgs/n-s4.jpg",
+    alt: "Modern luxury apartment community",
+  },
+  {
+    src: "/imgs/n-s5.jpg",
     alt: "Modern luxury apartment community",
   },
 ];
@@ -37,7 +41,7 @@ function Section6() {
   };
 
   return (
-    <section id="gallery" className="overflow-hidden bg-white px-6 py-[38px] text-[#111] sm:px-10 sm:py-[47px] lg:px-[46px]">
+    <section id="gallery" className="overflow-hidden bg-white px-6 py-[35px] text-[#111] sm:px-10 lg:py-[70px]  ">
       <div className="mx-auto w-full max-w-[1250px]">
         <div className="mb-[27px] flex flex-col items-center justify-between gap-5 text-center md:flex-row md:items-start md:gap-8 md:text-left">
           <div className="min-w-0">

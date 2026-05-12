@@ -22,7 +22,7 @@ function Section7() {
   };
 
   return (
-    <section id="plans" className="bg-white px-6 py-[30px] sm:px-10 lg:px-[46px]">
+    <section id="plans" className="bg-white px-6 pt-[30px] sm:px-10 lg:px-[46px]">
       <div className="mx-auto w-full max-w-[1250px] space-y-8 sm:space-y-[51px]">
         {planSections.map((section) => {
           const imageBlock = (

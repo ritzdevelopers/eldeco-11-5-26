@@ -11,7 +11,6 @@ const navLinks = [
   { label: "Amenities", href: "#amenities" },
   { label: "Price", href: "#price" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Master Floor Plan", href: "#plans" },
   { label: "Location", href: "#location" },
   { label: "Virtual Tour", href: "#virtual-tour" },
   { label: "Contact", href: "#contact" },

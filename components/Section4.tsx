@@ -55,7 +55,7 @@ function Section4() {
   };
 
   return (
-    <section id="amenities" className="bg-white  px-6 py-[52px] text-[#202020] sm:px-10 lg:px-11">
+    <section id="amenities" className="bg-white  px-6 py-[35px] text-[#202020] sm:px-10 lg:px-11 lg:py-[70px]">
       <div className=" w-full max-w-[1250px] m-auto">
         <div className="mb-[27px] text-center">
           <h2 className={`${styles.heading} text-[40px] font-[600] text-[#222222]`}>

@@ -9,7 +9,7 @@ function Section9() {
   };
 
   return (
-    <section id="virtual-tour" className="relative isolate flex min-h-[491px] items-center justify-center overflow-hidden px-6 py-12 text-white sm:px-10 lg:px-[49px] lg:py-0">
+    <section id="virtual-tour" className="relative isolate flex min-h-[491px] items-center justify-center overflow-hidden px-6 py-[35px] text-white sm:px-10 lg:px-[49px] lg:py-[70px]">
       <img
         src="/eld-imgs/s9/s9-bg2.jpg"
         alt=""

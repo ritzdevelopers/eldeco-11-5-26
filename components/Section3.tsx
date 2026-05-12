@@ -41,7 +41,7 @@ function Section3() {
   return (
     <section
       id="highlights"
-      className="flex min-h-0 items-center justify-center overflow-hidden bg-black px-6 pb-[35px] pt-[43px] text-white sm:px-10 lg:min-h-[715px] lg:px-[58px]"
+      className="flex min-h-0 items-center justify-center overflow-hidden bg-black px-6 py-[35px] text-white sm:px-10 lg:min-h-[715px] lg:px-[58px] lg:py-[70px]"
     >
       <div className="mx-auto w-full max-w-none text-center xl:max-w-[860px]">
         <div className="mt-[25px] flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-8 xl:gap-[88px]">

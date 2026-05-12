@@ -39,3 +39,12 @@
     }
   }
 }
+
+.height_responsive {
+  height: auto !important;
+}
+@media (min-width: 1342px) {
+  .height_responsive {
+    height: 365px !important;
+   }
+}

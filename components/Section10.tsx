@@ -25,7 +25,7 @@ function Section10() {
   };
 
   return (
-    <section id="contact" className="bg-white px-6 py-[50px] text-[#171717] sm:px-10 lg:px-[42px]">
+    <section id="contact" className="bg-white px-6 py-[35px] text-[#171717] sm:px-10 lg:px-[42px] lg:py-[70px]">
       <div className="mx-auto flex w-full max-w-[1250px] flex-col items-center justify-center gap-8 lg:flex-row lg:gap-[32px]">
         <div className="flex h-full w-full max-w-[713px] flex-col items-stretch overflow-hidden border border-[#e5e5e5] bg-white sm:flex-row lg:max-w-none lg:flex-[0_1_713px] xl:w-auto xl:flex-none">
           <div className="w-full px-[18px] pb-[24px] pt-[23px] sm:flex-1 sm:px-[23px] xl:w-[454px] xl:flex-none xl:shrink-0">
@@ -80,20 +80,20 @@ function Section10() {
 
           <div className="relative min-h-[260px] w-full sm:min-h-[527px] sm:w-[220px] sm:shrink-0 xl:w-[259px]">
             <img
-              src="/eld-imgs/s10/s10-img.jpg"
+              src="/eld-imgs/s10/s10-nimg.jpg"
               alt="Luxury apartment balcony"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
 
-        <div className="flex h-full w-full max-w-[713px] flex-col justify-center text-left lg:max-w-[480px]">
+        <div className="flex h-full w-full max-w-[713px] flex-col justify-center text-left lg:max-w-[323px] xl:max-w-[480px]">
           <h2 className={`${styles.heading} text-[30px] font-[600]  text-center lg:text-left text-black`}>
             About Developer
           </h2>
 
           <div className="mt-[16px] space-y-[18px] leading-[1.55] text-[#202020]">
-            <p className={`${styles.paragraph} font-[400] text-[16px] text-center lg:text-left  `}>
+            <p className={`${styles.paragraph} font-[400] lg:text-[13px] text-[16px] xl:text-[16px] text-center lg:text-left  `}>
               Eldeco Group is one of India's most trusted and established real estate
               developers, with a legacy spanning over four decades. Known for
               delivering premium residential, commercial, and integrated township
@@ -102,7 +102,7 @@ function Section10() {
               design.
             </p>
 
-            <p className={`${styles.paragraph} font-[400] text-[16px] text-center lg:text-left  `}>
+            <p className={`${styles.paragraph} font-[400] lg:text-[13px] text-[16px] xl:text-[16px] text-center lg:text-left  `}>
               With a strong presence across multiple cities in North India, Eldeco
               Group has successfully delivered numerous projects and earned the trust
               of thousands of families through timely delivery, transparency, and
@@ -111,7 +111,7 @@ function Section10() {
               lifestyle experiences.
             </p>
 
-            <p className={`${styles.paragraph} font-[400] text-[16px] text-center lg:text-left  `}>
+            <p className={`${styles.paragraph} font-[400] lg:text-[13px] text-[16px] xl:text-[16px] text-center lg:text-left  `}>
               Driven by excellence and a vision to redefine urban living, Eldeco Group
               continues to craft future-ready developments that combine strategic
               locations, world-class amenities, and superior living standards for

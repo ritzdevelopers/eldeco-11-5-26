@@ -20,7 +20,7 @@ function Section5() {
   };
 
   return (
-    <section id="price" className="relative isolate flex min-h-[646px] items-center justify-center overflow-hidden bg-black px-6 py-12 text-white sm:px-10 lg:px-0 lg:py-0 ">
+    <section id="price" className="relative isolate flex min-h-[646px] items-center justify-center overflow-hidden bg-black px-6 py-[35px] text-white sm:px-10 lg:px-0 lg:py-[70px] ">
       <img
         src="/eld-imgs/s5/s5-bg.png"
         alt=""

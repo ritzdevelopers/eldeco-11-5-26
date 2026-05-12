@@ -41,10 +41,10 @@ const locationAdvantages = [
 
 function Section8() {
   return (
-    <section id="location" className="overflow-hidden bg-white px-6 pb-[37px] pt-[36px] text-[#181818] sm:px-10 lg:px-[32px]">
+    <section id="location" className="overflow-hidden bg-white px-6 pb-[35px] text-[#181818] sm:px-10 lg:px-[32px] lg:pb-[70px]">
       <div className="mx-auto w-full max-w-[1250px]">
         <div className="mb-[27px] text-center">
-          <h2 className={`${styles.heading} text-[32px] font-[600] text-[#000000] sm:text-[36px] lg:text-[40px]`}>
+          <h2 className={`${styles.heading} md:text-[32px] text-[29px] font-[600] text-[#000000] sm:text-[36px] lg:text-[40px]`}>
             Location Advantages
           </h2>
           <p className={`${styles.paragraph} mt-[5px] text-[20px] font-[400] text-[#000000] sm:text-[22px] lg:text-[24px]`}>
