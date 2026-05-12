@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 const priceCards = [
   {
     type: "3 BHK",
-    price: "₹ 2.99 Cr*",
+    price: "₹ 3.11 Cr*",
   },
   {
     type: "3.5 BHK",

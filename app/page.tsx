@@ -9,6 +9,7 @@ import Section8 from "@/components/Section8";
 import Section9 from "@/components/Section9";
 import Section10 from "@/components/Section10";
 import Footer from "@/components/Footer";
+import FloatingEnquiryButton from "@/components/FloatingEnquiryButton";
 import LeadPopup from "@/components/LeadPopup";
 import Navbar from "@/components/Navbar";
 
@@ -16,6 +17,7 @@ function Page() {
   return (
     <>
       <LeadPopup />
+      <FloatingEnquiryButton />
       <Navbar />
       <Home />
       <Section2 />

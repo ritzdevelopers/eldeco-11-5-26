@@ -7,42 +7,42 @@ import styles from "./page.module.css";
 const amenities = [
   {
     title: "All Weather Infinity pool",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/infinity-pool.jpg",
     icon: "/eld-imgs/s4/s4-i1.svg",
   },
   {
     title: "Lawn tennis court",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/lawn-tenis.jpg",
     icon: "/eld-imgs/s4/s4-i2.svg",
   },
   {
     title: "Yoga & aerobics",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/yoga.jpg",
     icon: "/eld-imgs/s4/s4-i3.svg",
   },
   {
     title: "Jogging and fitness tracks",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/jogging.jpg",
     icon: "/eld-imgs/s4/s4-i4.svg",
   },
   {
     title: "Landscaped podium greens",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/landscaped.jpg",
     icon: "/eld-imgs/s4/s4-i5.svg",
   },
   {
     title: "Badminton, Cricket, & Squash Court",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/bed-minton.jpg",
     icon: "/eld-imgs/s4/s4-i6.svg",
   },
   {
     title: "3 High-Speed Lift Per Tower",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/high-speed.jpg",
     icon: "/eld-imgs/s4/s4-i7.svg",
   },
   {
     title: "Exclusive GQ Club",
-    image: "/eld-imgs/s4/s4-i1.jpg",
+    image: "/amenities/ExclusiveGQClub.jpg",
     icon: "/eld-imgs/s4/s4-i8.svg",
   },
 ];

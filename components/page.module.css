@@ -7,3 +7,35 @@
 .paragraph {
   font-family: "Open Sans", Arial, sans-serif;
 }
+
+.floatingEnquiryButton {
+  animation: floating-enquiry-button 2.8s ease-in-out infinite;
+}
+
+@keyframes floating-enquiry-button {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .floatingEnquiryButton {
+    animation-name: floating-enquiry-button-desktop;
+  }
+
+  @keyframes floating-enquiry-button-desktop {
+    0%,
+    100% {
+      transform: translateY(-50%);
+    }
+
+    50% {
+      transform: translateY(calc(-50% - 8px));
+    }
+  }
+}

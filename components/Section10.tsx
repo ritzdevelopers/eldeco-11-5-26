@@ -71,7 +71,7 @@ function Section10() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-[2px] h-[50px] w-full cursor-pointer rounded-[5px] bg-gradient-to-r from-[#c59c35] to-[#f0dd7b] text-[16px] font-[600] text-white transition hover:from-[#b88c2c] hover:to-[#dcc86c] disabled:cursor-not-allowed disabled:opacity-70 sm:w-[128px]"
+                className="mt-[2px] h-[50px] w-full cursor-pointer rounded-[5px] bg-gradient-to-r from-[#C39B47] to-[#D3C676] text-[16px] font-[600] text-white transition hover:from-[#b88c2c] hover:to-[#dcc86c] disabled:cursor-not-allowed disabled:opacity-70 sm:w-[128px]"
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>
