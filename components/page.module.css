@@ -27,6 +27,7 @@
   .floatingEnquiryButton {
     animation-name: floating-enquiry-button-desktop;
   }
+  
 
   @keyframes floating-enquiry-button-desktop {
     0%,
