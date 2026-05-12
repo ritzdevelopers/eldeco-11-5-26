@@ -11,13 +11,10 @@ import styles from "./page.module.css";
 {/* <LiaLongArrowAltRightSolid />  */}
 const galleryImages = [
   {
-    src: "/eld-imgs/s6/s6-i1.jpg",
+    src: "/imgs/gn1.jpg",
     alt: "Luxury residential towers in Gurgaon",
   },
-  {
-    src: "/eld-imgs/s6/s6-i2.jpg",
-    alt: "Premium apartments with blue sky",
-  },
+ 
   {
     src: "/imgs/eld-img-3.jpg",
     alt: "Modern luxury apartment community",
