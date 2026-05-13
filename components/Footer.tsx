@@ -6,7 +6,7 @@ function Footer() {
       <div className="mx-auto max-w-[1250px]">
         <div className="mb-[30px] flex justify-center">
           <img
-            src="/logo/logo.png"
+            src="/logo/eldecologo.png"
             alt="Eldeco" 
             className="h-auto w-[196px]"
           />

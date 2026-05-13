@@ -70,7 +70,7 @@ function Navbar() {
       <div className="mx-auto flex h-full max-w-[1250px] items-center justify-between px-4 md:px-12 xl:px-0">
         <a href="#home" aria-label="Eldeco home" className="shrink-0">
           <img
-            src="/logo/logo.png"
+            src="/logo/eldecologo.png"
             alt="Eldeco"
             className="h-auto w-[196px]"
           />
@@ -135,7 +135,7 @@ function Navbar() {
                   className="shrink-0"
                 >
                   <img
-                    src="/logo/logo.png"
+                    src="/logo/eldecologo.png"
                     alt="Eldeco"
                     className="h-auto w-[160px]"
                   />
