@@ -76,13 +76,13 @@ function Section4() {
                   key={amenity.title}
                   type="button"
                   onClick={() => setActiveAmenity(index)}
-                  className={`flex h-[96px] w-full flex-col items-center justify-center rounded-[5px] border text-center transition sm:h-[104px] lg:w-[170px] xl:w-[209px] ${
+                  className={`flex h-[66px] w-full flex-col items-center justify-center rounded-[5px] border text-center transition md:h-[104px] lg:w-[170px] xl:w-[209px] ${
                     isActive
                       ? " bg-gradient-to-r from-[#c59c35] to-[#e2d37a] text-white "
                       : "border-[#dedede] bg-white text-[#1f1f1f]"
                   }`}
                 >
-                  <span className="mb-[5px] flex h-[27px] items-center justify-center">
+                  <span className="mb-[5px] hidden h-[27px] items-center justify-center md:flex">
                     <img
                       src={amenity.icon}
                       alt={amenity.title}

@@ -70,7 +70,11 @@ function Navbar() {
       <div className="mx-auto flex h-full max-w-[1250px] items-center justify-between px-4 md:px-12 xl:px-0">
         <a href="#home" aria-label="Eldeco home" className="shrink-0">
           <img
-            src="/logo/eldecologo.png"
+            src={
+              isScrolled
+                ? "/logo/eldecologo.png"
+                : "/logo/eldeco-logo-white.png"
+            }
             alt="Eldeco"
             className="h-auto w-[196px]"
           />

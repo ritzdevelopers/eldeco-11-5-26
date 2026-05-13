@@ -82,7 +82,7 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" /> */}
       </div>
 
-      <div className="absolute left-1/2 top-[9%] w-full max-w-[1250px] -translate-x-1/2 px-6 sm:px-12 lg:px-0">
+      <div className="absolute left-1/2 md:top-[9%] top-[12%] w-full max-w-[1250px] -translate-x-1/2  px-6 sm:px-12 xl:px-0">
         <div className={`${styles.paragraph} ml-auto w-fit text-right text-[9px] font-[400]  text-white`}>
           Project RERA No.: GGM/XXXX/XXX/2023/XX Dated: 11.02.2026
           <br />
@@ -94,11 +94,13 @@ function Home() {
 
       <div className="mx-auto flex min-h-screen max-w-[1250px] items-end px-6 pb-[60px] md:pb-0 sm:px-12 xl:px-0">
         <div className="mb-8 w-full max-w-[600px] text-center">
-          <h1 className={`${styles.heading} mb-3 text-2xl font-bold leading-tight sm:text-3xl`}>
+          <h1
+            className={`${styles.heading} mb-3 font-bold leading-tight text-[22px] min-[640px]:text-[26px] min-[768px]:text-[30px]`}
+          >
             Iconic Luxury Apartments In Gurgaon
           </h1>
 
-          <div className="mb-4 grid max-w-[600px] grid-cols-1 text-sm font-bold text-white sm:grid-cols-[1fr_1.1fr]">
+          <div className="mb-4 grid max-w-[600px] grid-cols-1 text-[16px] font-bold text-white min-[640px]:grid-cols-[1fr_1.1fr] min-[768px]:text-[14px]">
             <div className="border border-white/65 bg-black/25 px-5 py-4">
               Ultra Luxurious Apartments
             </div>
@@ -107,35 +109,49 @@ function Home() {
             </div>
           </div>
 
-          <div className="mb-3 w-full justify-center items-center flex gap-7">
+          <div className="mb-3 flex w-full items-center justify-center gap-7">
             <div>
-              <p className={`${styles.paragraph} mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80`}>
+              <p
+                className={`${styles.paragraph} mb-1 text-[13px] font-semibold uppercase tracking-wider text-white/80`}
+              >
                 Starting Price
               </p>
-              <p className={`${styles.paragraph} text-2xl font-bold`}>₹3.11 Cr*</p>
+              <p
+                className={`${styles.paragraph} text-[20px] font-bold min-[768px]:text-[24px]`}
+              >
+                ₹3.11 Cr*
+              </p>
             </div>
 
             <div className="h-12 w-px bg-white/55" />
 
             <div>
-              <p className={`${styles.paragraph} mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80`}>
-              Nothing for 36 Months
+              <p
+                className={`${styles.paragraph} mb-1 text-[13px] font-semibold uppercase tracking-wider text-white/80`}
+              >
+                Nothing for 36 Months
               </p>
-              <p className={`${styles.paragraph} text-2xl font-bold`}>Pay 30% Now</p>
+              <p
+                className={`${styles.paragraph} text-[20px] font-bold min-[768px]:text-[24px]`}
+              >
+                Pay 30% Now
+              </p>
             </div>
           </div>
 
-          <div className="mb-4 inline-flex flex-wrap w-full justify-center items-center bg-[#c9a032] gap-2 md:gap-0 px-4 py-2 text-xs font-semibold text-white">
+          <div className="mb-4 inline-flex w-full flex-wrap items-center justify-center gap-2 bg-[#c9a032] px-4 py-2 text-[13px] font-semibold text-white min-[768px]:gap-0 min-[768px]:text-[12px]">
             <span>Luxurious Properties</span>
-            <span className="mx-3 h-4 w-px bg-white/70 md:block hidden" />
+            <span className="mx-3 hidden h-4 w-px bg-white/70 min-[768px]:block" />
             <span>Prime Locations</span>
-            <span className="mx-3 h-4 w-px bg-white/70 md:block hidden" />
+            <span className="mx-3 hidden h-4 w-px bg-white/70 min-[768px]:block" />
             <span>Wrapped Balconies</span>
-            <span className="mx-3 h-4 w-px bg-white/70 md:block hidden" />
+            <span className="mx-3 hidden h-4 w-px bg-white/70 min-[768px]:block" />
             <span>Virtual Visit</span>
           </div>
 
-          <p className={`${styles.paragraph} flex items-center justify-center text-center gap-2 text-sm font-semibold`}>
+          <p
+            className={`${styles.paragraph} flex items-center justify-center gap-2 text-center text-[16px] font-semibold  `}
+          >
             <span>●</span>
             At Sector 80, Gurugram
           </p>
