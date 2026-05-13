@@ -45,10 +45,10 @@ function Section6() {
       <div className="mx-auto w-full max-w-[1250px]">
         <div className="mb-[27px] flex flex-col items-center justify-between gap-5 text-center md:flex-row md:items-start md:gap-8 md:text-left">
           <div className="min-w-0">
-            <h2 className={`${styles.heading} text-[32px] font-[700] text-[#000000] sm:text-[36px] lg:text-[40px]`}>
+            <h2 className={`${styles.heading} md:text-[32px] text-[25px] font-[700] text-[#000000] sm:text-[36px] lg:text-[40px]`}>
               Your Gateway To Luxury Living
             </h2>
-            <p className={`${styles.paragraph} mx-auto mt-[8px] max-w-[850px] text-[18px] font-[400] text-[#000000] sm:text-[21px] md:mx-0 lg:text-[24px]`}>
+            <p className={`${styles.paragraph} mx-auto mt-[8px] max-w-[850px] md:text-[24px] text-[18px] font-[400] text-[#000000] sm:text-[21px] md:mx-0 lg:text-[24px]`}>
               Discover luxury apartments in Sector 80 Gurgaon with premium amenities,
               modern living, & seamless connectivity.
             </p>

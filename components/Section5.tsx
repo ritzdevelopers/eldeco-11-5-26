@@ -30,10 +30,10 @@ function Section5() {
 
       <div className="mx-auto  w-full max-w-[1024px]">
         <div className="text-center">
-          <h2 className={`${styles.heading} text-[40px] font-[600] text-[#ffffff]`}>
+          <h2 className={`${styles.heading} md:text-[40px] text-[25px] font-[600] text-[#ffffff]`}>
             Our Price
           </h2>
-          <p className={`${styles.paragraph} mt-[5px] text-[24px] font-[400]   text-[#ffffff]`}>
+          <p className={`${styles.paragraph} mt-[5px] md:text-[24px] text-[18px] font-[400]   text-[#ffffff]`}>
             Luxury Apartments At Prime Prices
           </p>
         </div>

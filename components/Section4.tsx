@@ -58,10 +58,10 @@ function Section4() {
     <section id="amenities" className="bg-white  px-6 py-[35px] text-[#202020] sm:px-10 lg:px-11 lg:py-[70px]">
       <div className=" w-full max-w-[1250px] m-auto">
         <div className="mb-[27px] text-center">
-          <h2 className={`${styles.heading} text-[40px] font-[600] text-[#222222]`}>
+          <h2 className={`${styles.heading} md:text-[40px] text-[25px] font-[600] text-[#222222]`}>
             Modern Amenities
           </h2>
-          <p className={`${styles.paragraph} mt-[5px] text-[24px] font-[400]   text-[#202020]`}>
+          <p className={`${styles.paragraph} mt-[5px] md:text-[24px] text-[18px] font-[400]   text-[#202020]`}>
             Best Amenities In Gurgaon Residences
           </p>
         </div>

@@ -29,7 +29,7 @@ function Section10() {
       <div className="mx-auto flex w-full max-w-[1250px] flex-col items-center justify-center gap-8 lg:flex-row lg:gap-[32px]">
         <div className="flex h-full w-full max-w-[713px] flex-col items-stretch overflow-hidden border border-[#e5e5e5] bg-white sm:flex-row lg:max-w-none lg:flex-[0_1_713px] xl:w-auto xl:flex-none">
           <div className="w-full px-[18px] pb-[24px] pt-[23px] sm:flex-1 sm:px-[23px] xl:w-[454px] xl:flex-none xl:shrink-0">
-            <h2 className={`${styles.heading} mb-[16px] text-[30px] font-[600] text-[#000000]`}>
+            <h2 className={`${styles.heading} mb-[16px] md:text-[30px] text-[25px] font-[600] text-[#000000]`}>
               Request a Call Back
             </h2>
 

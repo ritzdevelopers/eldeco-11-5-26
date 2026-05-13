@@ -87,7 +87,7 @@ function Section2() {
         <div className="flex h-full min-w-0 flex-col">
         
           <div className="border border-neutral-200 px-5 py-8 sm:px-8 sm:py-12">
-            <h2 className={`${styles.heading} mb-5 text-[30px] font-[600] text-[#2a2a2a] text-center lg:text-left`}>
+            <h2 className={`${styles.heading} mb-5 md:text-[30px] text-[25px] font-[600] text-[#2a2a2a] text-center lg:text-left`}>
               Request a Call Back
             </h2>
 

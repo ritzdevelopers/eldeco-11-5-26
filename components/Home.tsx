@@ -4,19 +4,45 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import styles from "./page.module.css";
 
+// Desktop View Images
 const slides = [
-   "/imgs/eld-img-2.jpg",
+  "/imgs/eld-img-2.jpg",
   "/imgs/slider2.jpg",
   "/imgs/slider1.jpg",
- 
 ];
 
+// Mobile / tablet (< lg): third slide uses mobile-specific art
+const slides_mobile = [
+  "/imgs/eld-img-2.jpg",
+  "/imgs/slider2.jpg",
+  "/imgs/mobile-bg-img.jpg",
+];
+
+function useHeroSlides() {
+  const [isLg, setIsLg] = useState(true);
+
+  useLayoutEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const sync = () => setIsLg(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  return isLg ? slides : slides_mobile;
+}
+
 function Home() {
+  const heroSlides = useHeroSlides();
   const [activeSlide, setActiveSlide] = useState(0);
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
+
+  useEffect(() => {
+    setActiveSlide(0);
+  }, [heroSlides]);
 
   const previousSlide = () => {
     swiper?.slidePrev();
@@ -30,6 +56,7 @@ function Home() {
     <section id="home" className="relative isolate min-h-screen overflow-hidden   text-white">
       <div className="absolute inset-0 -z-10">
         <Swiper
+          key={heroSlides === slides ? "desktop" : "mobile"}
           modules={[Autoplay]}
           onSwiper={setSwiper}
           onSlideChange={(slider) => setActiveSlide(slider.realIndex)}
@@ -40,7 +67,7 @@ function Home() {
           loop
           className="h-full w-full"
         >
-          {slides.map((src, index) => (
+          {heroSlides.map((src, index) => (
             <SwiperSlide key={`${src}-${index}`}>
               <img
                 src={src}
@@ -98,13 +125,13 @@ function Home() {
             </div>
           </div>
 
-          <div className="mb-4 inline-flex flex-wrap w-full justify-center items-center bg-[#c9a032] px-4 py-2 text-xs font-semibold text-white">
+          <div className="mb-4 inline-flex flex-wrap w-full justify-center items-center bg-[#c9a032] gap-2 md:gap-0 px-4 py-2 text-xs font-semibold text-white">
             <span>Luxurious Properties</span>
-            <span className="mx-3 h-4 w-px bg-white/70" />
+            <span className="mx-3 h-4 w-px bg-white/70 md:block hidden" />
             <span>Prime Locations</span>
-            <span className="mx-3 h-4 w-px bg-white/70" />
+            <span className="mx-3 h-4 w-px bg-white/70 md:block hidden" />
             <span>Wrapped Balconies</span>
-            <span className="mx-3 h-4 w-px bg-white/70" />
+            <span className="mx-3 h-4 w-px bg-white/70 md:block hidden" />
             <span>Virtual Visit</span>
           </div>
 
@@ -118,7 +145,7 @@ function Home() {
       <div className="absolute bottom-5 lg:bottom-14 md:-right-8 lg:right-0 lg:left-1/2 w-full left-1/2 -translate-x-1/2 max-w-[1250px] lg:-translate-x-1/2 px-6 sm:px-12 lg:px-0">
         <div className="ml-auto flex w-fit items-center gap-5">
           <div className="flex items-center gap-4 text-sm font-bold">
-            {slides.map((_, index) => (
+            {heroSlides.map((_, index) => (
               <button
                 key={index}
                 type="button"

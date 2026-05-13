@@ -87,10 +87,10 @@ function LeadPopup() {
 
         <div className="pr-8">
           
-          <h2 className={`${styles.heading} mt-2 text-3xl font-extrabold leading-tight text-black`}>
+          <h2 className={`${styles.heading} mt-2 md:text-[30px] text-[24px] font-[600] leading-tight text-black `}>
             Request a Call Back
           </h2>
-          <p className={`${styles.paragraph} mt-2 max-w-[420px] text-sm font-medium leading-relaxed text-neutral-600`}>
+          <p className={`${styles.paragraph} mt-2 max-w-[420px] text-[16px] font-[400] leading-relaxed text-neutral-600 `}>
             Share your details and our property expert will connect with you shortly.
           </p>
         </div>
@@ -133,12 +133,12 @@ function LeadPopup() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="h-11 rounded-[4px] bg-[#c59c35] px-8 text-sm font-extrabold text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-70 sm:col-span-2 sm:w-fit"
+            className="h-11 rounded-[4px] bg-[#c59c35] px-8 text-[16px] font-[600] text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-70 sm:col-span-2 sm:w-fit"
           >
             {isSubmitting ? "Submitting..." : "Submit Enquiry"}
           </button>
 
-          <p className={`${styles.paragraph} text-[11px] leading-relaxed text-neutral-500 sm:col-span-2`}>
+          <p className={`${styles.paragraph} text-[16px] font-[400] leading-relaxed text-neutral-500 sm:col-span-2`}>
             By submitting, you agree to be contacted regarding Eldeco project details.
           </p>
         </form>
