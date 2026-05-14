@@ -138,7 +138,7 @@ function LeadPopup() {
             {isSubmitting ? "Submitting..." : "Submit Enquiry"}
           </button>
 
-          <p className={`${styles.paragraph} text-[16px] font-[400] leading-relaxed text-neutral-500 sm:col-span-2`}>
+          <p className={`${styles.paragraph} text-[13px] md:text-[16px] font-[400] leading-relaxed text-neutral-500 sm:col-span-2`}>
             By submitting, you agree to be contacted regarding Eldeco project details.
           </p>
         </form>

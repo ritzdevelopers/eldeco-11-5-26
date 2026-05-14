@@ -67,7 +67,7 @@ function Section4() {
         </div>
 
         <div className="flex flex-col items-stretch justify-between gap-7 lg:flex-row lg:gap-[14px]">
-          <div className="grid w-full grid-cols-2 gap-x-[14px] gap-y-[13px] lg:w-auto lg:shrink-0">
+          <div className="order-2 grid w-full grid-cols-2 gap-x-[14px] gap-y-[13px] lg:order-none lg:w-auto lg:shrink-0">
             {amenities.map((amenity, index) => {
               const isActive = activeAmenity === index;
 
@@ -107,7 +107,7 @@ function Section4() {
             </button>
           </div>
 
-          <div className="relative aspect-[790/533] w-full overflow-hidden rounded-[13px] lg:aspect-auto lg:min-h-[533px] lg:min-w-0 lg:flex-1 lg:max-w-none xl:min-h-0 xl:max-w-[790px]">
+          <div className="relative order-1 aspect-[790/533] w-full overflow-hidden rounded-[13px] lg:order-none lg:aspect-auto lg:min-h-[533px] lg:min-w-0 lg:flex-1 lg:max-w-none xl:min-h-0 xl:max-w-[790px]">
             <img
               key={activeAmenity}
               src={amenities[activeAmenity].image}
