@@ -67,7 +67,7 @@ function Section4() {
         </div>
 
         <div className="flex flex-col items-stretch justify-between gap-7 lg:flex-row lg:gap-[14px]">
-          <div className="order-2 grid w-full grid-cols-2 gap-x-[14px] gap-y-[13px] lg:order-none lg:w-auto lg:shrink-0">
+          <div className="grid w-full grid-cols-2 gap-x-[14px] gap-y-[13px] lg:w-auto lg:shrink-0">
             {amenities.map((amenity, index) => {
               const isActive = activeAmenity === index;
 
@@ -101,13 +101,13 @@ function Section4() {
             <button
               type="button"
               onClick={openLeadPopup}
-              className="col-span-2 mt-[5px] h-[60px] rounded-[5px] bg-gradient-to-r from-[#c39a34] to-[#e3d57c] text-[16px] font-[600] text-white transition-all duration-300 hover:-translate-y-[2px] hover:from-[#b98f2e] hover:to-[#d8c866] hover:shadow-[0_10px_22px_rgba(195,154,52,0.35)] active:translate-y-0"
+              className="col-span-2 mt-[5px] hidden h-[60px] rounded-[5px] bg-gradient-to-r from-[#c39a34] to-[#e3d57c] text-[16px] font-[600] text-white transition-all duration-300 hover:-translate-y-[2px] hover:from-[#b98f2e] hover:to-[#d8c866] hover:shadow-[0_10px_22px_rgba(195,154,52,0.35)] active:translate-y-0 lg:block"
             >
               View All Amenities
             </button>
           </div>
 
-          <div className="relative order-1 aspect-[790/533] w-full overflow-hidden rounded-[13px] lg:order-none lg:aspect-auto lg:min-h-[533px] lg:min-w-0 lg:flex-1 lg:max-w-none xl:min-h-0 xl:max-w-[790px]">
+          <div className="relative aspect-[790/533] w-full overflow-hidden rounded-[13px] lg:aspect-auto lg:min-h-[533px] lg:min-w-0 lg:flex-1 lg:max-w-none xl:min-h-0 xl:max-w-[790px]">
             <img
               key={activeAmenity}
               src={amenities[activeAmenity].image}
@@ -115,6 +115,14 @@ function Section4() {
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
+
+          <button
+            type="button"
+            onClick={openLeadPopup}
+            className="mt-[5px] h-[60px] w-full shrink-0 rounded-[5px] bg-gradient-to-r from-[#c39a34] to-[#e3d57c] text-[16px] font-[600] text-white transition-all duration-300 hover:-translate-y-[2px] hover:from-[#b98f2e] hover:to-[#d8c866] hover:shadow-[0_10px_22px_rgba(195,154,52,0.35)] active:translate-y-0 lg:hidden"
+          >
+            View All Amenities
+          </button>
         </div>
       </div>
     </section>
